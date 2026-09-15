@@ -120,7 +120,22 @@
 // bool isEven = (number % 2) == 0;
 // System.Console.WriteLine($"Число четное?: {isEven}");
 
-int hp = 0;
-Console.WriteLine($"Жизней: {++hp}");   // сначала прибавляем, потом выводим
-Console.WriteLine($"Жизней: {hp++}");   // сначала выводим, потом прибавляем
-Console.WriteLine($"Жизней осталось: {hp}");
+// int hp = 0;
+// Console.WriteLine($"Жизней: {++hp}");   // сначала прибавляем, потом выводим
+// Console.WriteLine($"Жизней: {hp++}");   // сначала выводим, потом прибавляем
+// Console.WriteLine($"Жизней осталось: {hp}");
+
+System.Console.Write("Введите сумму покупки: ");
+double summa = double.Parse(Console.ReadLine());
+System.Console.Write("Есть ли карта лояльности? (1 - да, 0 - нет): ");
+int kartaInput = int.Parse(Console.ReadLine());
+bool karta = (kartaInput == 1);
+System.Console.Write("Кол-во товаров в чеке: ");
+int tovarov = int.Parse(Console.ReadLine());
+bool eligibleForDiscount = (summa >= 3000 && tovarov >= 3) || karta;
+
+System.Console.WriteLine(summa);
+System.Console.WriteLine(kartaInput);
+System.Console.WriteLine(karta);
+System.Console.WriteLine(tovarov);
+System.Console.WriteLine(eligibleForDiscount);
