@@ -115,7 +115,12 @@
 // Console.WriteLine($"Проходит по правилам: {isEligibleByRules}");
 // Console.WriteLine($"Итоговый балл: {totalScore}");
 
-System.Console.Write("Введите целое число: ");
-int number = int.Parse(Console.ReadLine());
-bool isEven = (number % 2) == 0;
-System.Console.WriteLine($"Число четное?: {isEven}");
+// System.Console.Write("Введите целое число: ");
+// int number = int.Parse(Console.ReadLine());
+// bool isEven = (number % 2) == 0;
+// System.Console.WriteLine($"Число четное?: {isEven}");
+
+int hp = 0;
+Console.WriteLine($"Жизней: {++hp}");   // сначала прибавляем, потом выводим
+Console.WriteLine($"Жизней: {hp++}");   // сначала выводим, потом прибавляем
+Console.WriteLine($"Жизней осталось: {hp}");
